@@ -3,107 +3,160 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="..." />
+    <meta name="description" content="A picture viewing app" />
     <meta name="author" content="Damien Drew" />
-    <meta name="keywords" content="..." />
-    <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="icon" type="image/x-icon" hef="favicon.ico" />
+    <meta name="keywords" content="??" />
     <title>Spots</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+    <link rel="icon" type="images/x-icon" href="./favicon.ico" />
   </head>
   <body>
     <div class="page">
-        <header class="header">
-            <img src="./images/Logo.svg" alt="Spot logo" class="header__logo">
-        </header>
-        <main class="content">
-          <section class="profile page__section">
-            <img 
-            src="./images/avatar.jpg" 
-            alt="Bessie Coleman" 
-            class="profile__avatar"
+      <header class="header">
+        <img src="./images/logo.svg" alt="Spots Logo" class="header__logo" />
+      </header>
+      <main class="content">
+        <section class="profile">
+          <div class="profile__avatar">
+            <img
+              src="./images/avatar.jpg"
+              alt="head shot of Bessie Coleman a civil aviator"
+              class="profile__avatar-image"
             />
-            <div class="profile__column">
-            <h1 class="profile__name">Bessie Coleman</h1>
-            <p class="profile__description">Civil Aviator</p>
-          <button type="button" class="profile__edit-bnt">
-            <img src="./images/Pencil.svg" alt="Pencil icon">Edit profile
-          </button>
-        </div>
-        <button type="button" class="profile__add-bnt">
-          <img src="./images/Plus.svg" alt="Plus icon">New Post
-        </button>
-          </section>
-          <section class="cards">
-            <ul class="cards__list">
+          </div>
+          <div class="profile__details">
+            <h1 class="profile__name overflow overflow--multi">
+              Bessie Coleman
+            </h1>
+            <h2 class="profile__about overflow overflow--multi">
+              Civil Aviator
+            </h2>
+            <div class="profile__container-button">
+              <button class="button profile__button-edit">Edit Profile</button>
+              <button
+                class="button profile__button-add"
+                aria-label="Add a new post button"
+                type="button"
+              >
+                <img
+                  src="./images/add-icon.png"
+                  alt="Add icon"
+                  class="profile__add-icon"
+                />New Post
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="cards">
+          <ul class="cards__list">
             <li class="card">
-              <img 
-              src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg" 
-              alt="Val Thorens" 
-              class="card__image"
+              <img
+                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+                alt="View of buildings adjacent to a ski resort"
+                class="card__image"
               />
-              <div class="card__content">
-                <h2 class="card__title">Val Thorens</h2>
-                <button type="button" class="card__like-btn">]</button>
+              <div class="card__textbox">
+                <h2 class="card__text overflow overflow--single">
+                  Val Thorens
+                </h2>
+                <button
+                  class="button card__button-like"
+                  aria-label="Like Button"
+                  type="button"
+                ></button>
               </div>
             </li>
             <li class="card">
-              <img 
-              src="./images/2-photo-by-ceiline-from-pexels.jpg" 
-              alt="Restaurant terrace" 
-              class="card__image"
+              <img
+                src="./images/2-photo-by-ceiline-from-pexels.jpg"
+                alt="View of a restaurant with seating on the street"
+                class="card__image"
               />
-              <div class="card__content">
-                <h2 class="card__title">Restaurant terrace</h2>
-                <button type="button" class="card__like-btn">]</button>
+              <div class="card__textbox">
+                <h2 class="card__text overflow overflow--single">
+                  Restaurant terrace
+                </h2>
+                <button
+                  class="button card__button-like"
+                  aria-label="Like Button"
+                  type="button"
+                ></button>
               </div>
             </li>
             <li class="card">
-              <img 
-              src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg" 
-              alt="An outdoor cafe" 
-              class="card__image"
+              <img
+                src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
+                alt="View of tables and chairs with people eating"
+                class="card__image"
               />
-              <div class="card__content">
-                <h2 class="card__title">An outdoor cafe</h2>
-                <button type="button" class="card__like-btn">]</button>
+              <div class="card__textbox">
+                <h2 class="card__text overflow overflow--single">
+                  An outdoor cafe
+                </h2>
+                <button
+                  class="button card__button-like"
+                  aria-label="Like Button"
+                  type="button"
+                ></button>
               </div>
             </li>
             <li class="card">
-              <img 
-              src="./images/4-photo-by-maurice-laschet-from-pexels.jpg" 
-              alt="A very long bridge, over the forest...." 
-              class="card__image"
+              <img
+                src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
+                alt="A long suspended bridge over a forest"
+                class="card__image"
               />
-              <div class="card__content">
-                <h2 class="card__title">A very long bridge, over the forest....</h2>
-                <button type="button" class="card__like-btn">]</button>
+              <div class="card__textbox">
+                <h2 class="card__text overflow overflow--single">
+                  A very long bridge, over the forest in Germany
+                </h2>
+                <button
+                  class="button card__button-like"
+                  aria-label="Like Button"
+                  type="button"
+                ></button>
               </div>
             </li>
             <li class="card">
-              <img 
-              src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg" 
-              alt="Tunnel with morning light" 
-              class="card__image"
+              <img
+                src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
+                alt="Man walking down a tunnel with lots of windows"
+                class="card__image"
               />
-              <div class="card__content">
-                <h2 class="card__title">Tunnel with morning light</h2>
-                <button type="button" class="card__like-btn">]</button>
+              <div class="card__textbox">
+                <h2 class="card__text overflow overflow--single">
+                  Tunnel with morning light
+                </h2>
+                <button
+                  class="button card__button-like"
+                  aria-label="Like Button"
+                  type="button"
+                ></button>
               </div>
             </li>
             <li class="card">
-              <img 
-              src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg" 
-              alt="Mountain house" 
-              class="card__image"
+              <img
+                src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
+                alt="A cabin in the woods on a snowy day"
+                class="card__image"
               />
-              <div class="card__content">
-                <h2 class="card__title">Mountain house</h2>
-                <button type="button" class="card__like-btn">]</button>
+              <div class="card__textbox">
+                <h2 class="card__text overflow overflow--single">
+                  Mountain House
+                </h2>
+                <button
+                  class="button card__button-like"
+                  aria-label="Like Button"
+                  type="button"
+                ></button>
               </div>
             </li>
           </ul>
         </section>
-        </main>
-        <footer class="footer"></footer>
+      </main>
+      <footer class="footer">
+        <h3 class="footer__text">2025 &copy Spots</h3>
+      </footer>
+    </div>
   </body>
 </html>

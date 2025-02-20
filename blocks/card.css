@@ -1,31 +1,45 @@
 .card {
-    width: auto;
-}
-
-.card__image {
-    height: 413px;
     width: 100%;
-    object-fit: cover;
+    list-style: none;
+  }
+  .card__image {
     display: block;
-}
-
-.card__content {
+    object-fit: cover;
+    aspect-ratio: 1 /1;
+    width: 100%;
+    border-radius: 8px;
+  }
+  .card__textbox {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-}
-
-.card__like-btn {
-    background-image: url(../images/Heart.svg);
-    width: 23px;
+    margin: 12px 0 0;
+  }
+  .card__text {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    max-width: 353px;
+  }
+  .card__button-like {
     height: 20px;
-    border: none;
+    width: 23px;
+    background-image: url("../images/like_icon_dark.png");
+    background-repeat: no-repeat;
+    background-size: contain;
     background-color: transparent;
+    border: none;
+    transition: opacity 0.25s ease-in-out;
+    align-self: flex-end;
     opacity: 40%;
-}
-
-@media screen and (max-width: 627px) {
-    .card__image {
-    height: 288px;
+  }
+  
+  .card__button-like:hover {
+    opacity: 100%;
+  }
+  
+  @media screen and (max-width: 460px) {
+    .card__text {
+      font-size: 16px;
     }
-}
+  }
+  
