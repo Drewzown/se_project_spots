@@ -46,7 +46,7 @@
   }
   .profile__button-edit {
     background-color: transparent;
-    background-image: url("../images/pencil.png");
+    background-image: url("../images/Pencil.svg");
     background-position: left;
     background-repeat: no-repeat;
     padding: 0;
@@ -60,6 +60,7 @@
   }
   
   .profile__button-add {
+    border: none;
     background-color: #212121;
     height: 52px;
     max-width: 157px;

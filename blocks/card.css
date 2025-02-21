@@ -23,7 +23,7 @@
   .card__button-like {
     height: 20px;
     width: 23px;
-    background-image: url("../images/like_icon_dark.png");
+    background-image: url("../images/like_icon_dark.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-color: transparent;
@@ -40,6 +40,12 @@
   @media screen and (max-width: 460px) {
     .card__text {
       font-size: 16px;
+      max-width: 250px;
     }
+  }
+
+  .card__like-button {
+    width: 20px;
+    height: 18px;
   }
   
