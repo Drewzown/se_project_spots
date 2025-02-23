@@ -32,14 +32,12 @@
     flex-grow: 1;
     max-width: 420px;
   }
-  .profile__edit {
-    display: flex;
-    gap: 8px;
-  }
+
   .profile__container-button {
     display: flex;
     align-items: flex-end;
   }
+  
   .profile__button-edit {
     background-color: transparent;
     background-image: url("../images/Pencil.svg");
@@ -49,6 +47,7 @@
     color: #212121;
     opacity: 70%;
     font-size: 16px;
+    font-weight: 500;
     border: none;
     width: 108px;
     text-align: right;
@@ -88,7 +87,7 @@
       padding: 20px 0;
       gap: 12px;
     }
-    .profile__avatar-image {
+    .profile__avatar {
       width: 80px;
       height: 80px;
     }
