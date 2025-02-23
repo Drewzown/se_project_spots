@@ -37,7 +37,7 @@
     display: flex;
     align-items: flex-end;
   }
-  
+
   .profile__button-edit {
     background-color: transparent;
     background-image: url("../images/Pencil.svg");
@@ -98,6 +98,7 @@
     }
     .profile__about {
       text-align: center;
+      margin-bottom: 32px;
     }
   
     .profile__details {
