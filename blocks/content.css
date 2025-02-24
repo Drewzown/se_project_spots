@@ -5,8 +5,8 @@
     padding: 0 20px;
   }
 
-  @media screen and (max-width: 320px) {
-    .card__text {
+  @media screen and (max-width: 627px) {
+    .content {
       padding: 0 16px
     }
   }
