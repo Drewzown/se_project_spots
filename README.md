@@ -4,6 +4,10 @@ Project similar to a social media photo sharing platform. User profile avatar an
 
 Nw project for the TripleTen. Completion of this project, design and provide feedback.
 
+## Project Video
+
+https://drive.google.com/file/d/1dIbBtxiF1vAbt08sPltjVPcpJk6tANpO/view?usp=drive_link
+
 ## Project Features
 
 - Flexbox
