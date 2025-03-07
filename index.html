@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="A picture viewing app" />
     <meta name="author" content="Damien Drew" />
-    <meta name="keywords" content="??" />
+    <meta name="keywords" content="HTML, CSS, JavaScript" />
     <title>Spots</title>
     <link rel="stylesheet" href="./pages/index.css" />
     <link rel="icon" type="images/x-icon" href="./favicon.ico" />
@@ -154,44 +154,47 @@
       </main>
       <footer class="footer">
         <h3 class="footer__text">2025 &copy; Spots</h3>
-      </footer>
-      <div class="modal modal_opened">
-        <div class="modal__container">
-          <button type="submit" class="modal__close-btn">
-            <img
-            src="./images/Close.svg"
-            alt="close"
-            class="modal__close-btn"
-            />
-          </button>
-          <h2 class="modal__title">Edit profile</h2>
-          <form name="edit-profile" class="modal__form">
-            <label for="name" class="modal__label">
-              Name
-              <input 
-              id="name"
-              type="text" 
-              class="modal__input"
-              placeholder="Type your name"
-              />
-            </label>
-            <label for="description" class="modal__label">
-              Description
-              <input 
-              id="description"
-              type="text" 
-              class="modal__input"
-              placeholder="Describe yourself"
-              />
-            </label>
-            <button type="submit" class="modal__submit-btn">
+        <div class="modal modal__opened">
+          <div class="modal__container">
+            <button
+              class="modal__close-btn"
+              src="./images/Close.svg"
+              alt="closeWindow"
+            >
+              <img src="./images/Close.svg" alt="closeWindow" />
+            </button>
+            <h2 class="modal__title">Edit Profile</h2>
+  
+            <form name="edit-profile">
+              <label class="modal__label" for="name"
+                >Name
+                <input
+                  type="text"
+                  id="name"
+                  name="name-profile"
+                  placeholder="type your name here"
+                  class="modal__input"
+              /></label>
+              <label class="modal__label" for="description"
+                >Description
+                <input
+                  type="text"
+                  id="description"
+                  name="description-profile"
+                  placeholder="Describe yourself"
+                  class="modal__input"
+                />
+              </label>
+              <button class="modal__submit-btn"
+            src="./images/Save.svg"
+            alt="saveWindow">>
               <img
                   src="./images/Save.svg"
                   alt="save"
                   class="modal__submit-btn"
                   />
             </button>
-          </form>
+            </form>
       </div>
     </div>
 <script defer src="./scripts/index.js"></script>
