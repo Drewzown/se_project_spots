@@ -3,200 +3,147 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="A picture viewing app" />
-    <meta name="author" content="Damien Drew" />
-    <meta name="keywords" content="HTML, CSS, JavaScript" />
-    <title>Spots</title>
     <link rel="stylesheet" href="./pages/index.css" />
-    <link rel="icon" type="images/x-icon" href="./favicon.ico" />
+    <meta name="description" content="" />
+    <meta name="author" content="Damien Drew" />
+    <meta name="keywords" content="HTML, CSS, " />
+    <link rel="icon" type="image/png" href="./favicon.ico" />
+    <title>Spots</title>
   </head>
   <body>
     <div class="page">
       <header class="header">
-        <img src="./images/logo.svg" alt="Spots Logo" class="header__logo" />
+        <img
+          src="./images/Logo_(1).svg"
+          alt="Spots Logo"
+          class="header__logo"
+        />
       </header>
       <main class="content">
-        <section class="profile">
-            <img
-              src="./images/avatar.jpg"
-              alt="head shot of Bessie Coleman a civil aviator"
-              class="profile__avatar"
-            />
-          <div class="profile__details">
-            <h1 class="profile__name overflow overflow_type_multi">
-              Bessie Coleman
-            </h1>
-            <h2 class="profile__about overflow overflow_type_multi">
-              Civil Aviator
-            </h2>
-            <div class="profile__container-button">
-              <button type="button" class="button profile__button-edit">Edit Profile</button>
-              <button
-                class="button profile__button-add"
-                aria-label="Add a new post button"
-                type="button"
-              >
-                <img
-                  src="./images/add-icon.svg"
-                  alt="Add icon"
-                  class="profile__add-icon"
-                />New Post
-              </button>
-            </div>
+        <section class="profile page__section">
+          <img
+            src="./images/avatar.jpg"
+            alt="Bessie Coleman"
+            class="profile__avatar"
+          />
+          <div class="profile__column">
+            <h1 class="profile__name">Bessie Coleman</h1>
+            <p class="profile__description">Civil Aviator</p>
+            <button type="button" class="profile__edit-btn">
+              <img src="./images/Group_2.svg" alt="pencil icon" />Edit Profile
+            </button>
           </div>
+          <button type="button" class="profile__add-btn">
+            <img src="./images/Group_26.svg" alt="plus icon" />New Post
+          </button>
         </section>
-        <section class="cards">
+        <section class="cards page__section">
           <ul class="cards__list">
-            <li class="card">
-              <img
-                src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="View of buildings adjacent to a ski resort"
-                class="card__image"
-              />
-              <div class="card__textbox">
-                <h2 class="card__text overflow overflow_type_single">
-                  Val Thorens
-                </h2>
-                <button
-                  class="button card__button-like"
-                  aria-label="Like Button"
-                  type="button"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/2-photo-by-ceiline-from-pexels.jpg"
-                alt="View of a restaurant with seating on the street"
-                class="card__image"
-              />
-              <div class="card__textbox">
-                <h2 class="card__text overflow overflow_type_single">
-                  Restaurant terrace
-                </h2>
-                <button
-                  class="button card__button-like"
-                  aria-label="Like Button"
-                  type="button"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/3-photo-by-tubanur-dogan-from-pexels.jpg"
-                alt="View of tables and chairs with people eating"
-                class="card__image"
-              />
-              <div class="card__textbox">
-                <h2 class="card__text overflow overflow_type_single">
-                  An outdoor cafe
-                </h2>
-                <button
-                  class="button card__button-like"
-                  aria-label="Like Button"
-                  type="button"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/4-photo-by-maurice-laschet-from-pexels.jpg"
-                alt="A long suspended bridge over a forest"
-                class="card__image"
-              />
-              <div class="card__textbox">
-                <h2 class="card__text overflow overflow_type_single">
-                  A very long bridge, over the forest in Germany
-                </h2>
-                <button
-                  class="button card__button-like"
-                  aria-label="Like Button"
-                  type="button"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/5-photo-by-van-anh-nguyen-from-pexels.jpg"
-                alt="Man walking down a tunnel with lots of windows"
-                class="card__image"
-              />
-              <div class="card__textbox">
-                <h2 class="card__text overflow overflow_type_single">
-                  Tunnel with morning light
-                </h2>
-                <button
-                  class="button card__button-like"
-                  aria-label="Like Button"
-                  type="button"
-                ></button>
-              </div>
-            </li>
-            <li class="card">
-              <img
-                src="./images/6-photo-by-moritz-feldmann-from-pexels.jpg"
-                alt="A cabin in the woods on a snowy day"
-                class="card__image"
-              />
-              <div class="card__textbox">
-                <h2 class="card__text overflow overflow_type_single">
-                  Mountain House
-                </h2>
-                <button
-                  class="button card__button-like"
-                  aria-label="Like Button"
-                  type="button"
-                ></button>
-              </div>
-            </li>
+            <template id="card-template">
+              <li class="card">
+                <img src="" alt="" class="card__image" />
+                <button type="button" class="card__delete-button"></button>
+                <div class="card__content">
+                  <h2 class="card__title"></h2>
+                  <button type="button" class="card__like-button"></button>
+                </div>
+              </li>
+            </template>
           </ul>
         </section>
       </main>
       <footer class="footer">
-        <h3 class="footer__text">2025 &copy; Spots</h3>
-        <div class="modal modal__opened">
-          <div class="modal__container">
-            <button
-              class="modal__close-btn"
-              src="./images/Close.svg"
-              alt="closeWindow"
-            >
-              <img src="./images/Close.svg" alt="closeWindow" />
-            </button>
-            <h2 class="modal__title">Edit Profile</h2>
-  
-            <form name="edit-profile">
-              <label class="modal__label" for="name"
-                >Name
-                <input
-                  type="text"
-                  id="name"
-                  name="name-profile"
-                  placeholder="type your name here"
-                  class="modal__input"
-              /></label>
-              <label class="modal__label" for="description"
-                >Description
-                <input
-                  type="text"
-                  id="description"
-                  name="description-profile"
-                  placeholder="Describe yourself"
-                  class="modal__input"
-                />
-              </label>
-              <button class="modal__submit-btn"
-            src="./images/Save.svg"
-            alt="saveWindow">>
-              <img
-                  src="./images/Save.svg"
-                  alt="save"
-                  class="modal__submit-btn"
-                  />
-            </button>
-            </form>
+        <p class="footer__copyright">2025 &copy; Spots</p>
+      </footer>
+      <div class="modal" id="edit-profile-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn">
+            <img src="./images/Group_27.svg" alt="close icon" />
+          </button>
+          <h2 class="modal__title">Edit profile</h2>
+          <form name="edit-profile" class="modal__form" novalidate>
+            <label for="profile-name-input" class="modal__label">
+              Name
+              <input
+                id="profile-name-input"
+                type="text"
+                class="modal__input modal__input_type_error"
+                placeholder="Type your name"
+                required
+                minlength="2"
+                maxlength="40"
+              />
+              <span id="profile-name-input-error" class="modal__error"></span>
+            </label>
+            <label for="profile-description-input" class="modal__label">
+              Description
+              <input
+                id="profile-description-input"
+                type="text"
+                class="modal__input"
+                placeholder="Describe yourself"
+                required
+                minlength="2"
+                maxlength="200"
+              />
+              <span id="profile-description-input-error" class="modal__error"></span>
+            </label>
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
+        </div>
       </div>
-    </div>
-<script defer src="./scripts/index.js"></script>
+      <div class="modal" id="add-card-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn">
+            <img src="./images/Group_27.svg" alt="close icon" />
+          </button>
+          <h2 class="modal__title">New Post</h2>
+          <form name="card__form" class="modal__form" novalidate>
+            <label for="add-card-link-input" class="modal__label">
+              Image Link
+              <input
+                id="add-card-link-input"
+                type="url"
+                name="link"
+                class="modal__input"
+                placeholder="Paste a link to the picture"
+                required
+              />
+              <span id="add-card-link-input-error" class="modal__error"></span>
+            </label>
+            <label for="add-card-name-input" class="modal__label">
+              Caption
+              <input
+                id="add-card-name-input"
+                type="text"
+                name="name"
+                class="modal__input"
+                placeholder="Type your caption"
+                required
+                minlength="2"
+                maxlength="30"
+              />
+              <span id="add-card-name-input-error" class="modal__error"></span>
+            </label>
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal" id="preview-modal">
+        <div class="modal__image-container">
+          <button
+            aria-label="Close modal"
+            type="button"
+            class="modal__close-btn modal__close-btn-preview"
+          ></button>
+          <img
+            class="modal__image"
+            src="https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg"
+            alt=""
+          />
+          <p class="modal__caption">Golden Gate Bridge</p>
+        </div>
+      </div>
+      <script defer src="./scripts/index.js"></script>
   </body>
 </html>
