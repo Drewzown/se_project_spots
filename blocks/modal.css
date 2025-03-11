@@ -6,44 +6,67 @@
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 0 20px;
   visibility: hidden;
 }
+
 .modal_opened {
   visibility: visible;
 }
+
 .modal__container {
-background: #fff;
-padding: 32px 50px;
-max-width: 730px;
-position: relative;
-width: 100%;
-box-sizing: border-box;
+  background: #fff;
+  padding: 32px 50px;
+  max-width: 730px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 8px;
 }
+
 .modal__close-btn {
   position: absolute;
   top: 32px;
   right: 50px;
   width: 40px;
   height: 40px;
+  border-radius: 8px;
+  border: none;
+  background-color: transparent;
+  opacity: 0.4;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(../images/Closebutton.svg);
 }
+
 .modal__title {
   margin: 0 0 32px;
-  font-weight: 500;
   font-size: 32px;
-  line-height: 1;
+  font-weight: 500;
 }
+
 .modal__label {
   display: flex;
   flex-direction: column;
   gap: 8px;
   margin-bottom: 32px;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(33, 33, 33, 0.7);
 }
+
 .modal__input {
   padding: 16px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(33, 33, 33, 0.4);
+  font-size: 20px;
+  font-weight: 500px;
+  color: rgba(33, 33, 33, 1);
+  cursor: pointer;
 }
 
 .modal__input:hover {
@@ -53,27 +76,48 @@ box-sizing: border-box;
 .modal__submit-btn {
   width: 156px;
   padding: 18px 0;
+  border-radius: 8px;
+  background-color: #212121;
+  color: #fcf5e5;
 }
+
 @media screen and (max-width: 627px) {
-  .modal { 
-      padding: 0 10px;
+  .profile {
+    flex-direction: column;
+    max-width: 288px;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
   }
-  
-  .modal__container {
-      padding: 12px;
+
+  .profile__avatar {
+    margin: 0 0 12px;
+    height: 80px;
+    width: 80px;
   }
-  .modal__title {
-      font-size: 20px;
-      margin: 10px 0 34px;
+
+  .profile__column {
+    text-align: center;
+    margin: 0 0 20px;
   }
-  .modal__close-btn {
-      top: 12px;
-      right: 12px;
+
+  .profile__name {
+    font-size: 20px;
+    margin: 0 0 6px;
+    max-width: 288px;
   }
-  .modal__label {
-      margin-bottom: 24px;
+
+  .profile__description {
+    margin: 0 0 32px;
+    max-width: 288px;
   }
-  .modal__submit-btn {
-      width: 100%;
+
+  .profile__edit-btn {
+    margin: 0 auto;
+  }
+
+  .profile__add-btn {
+    margin: 0;
+    width: 288px;
   }
 }
