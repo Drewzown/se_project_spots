@@ -1,62 +1,96 @@
 .card__image {
   height: 413px;
-  width: 100%;
   object-fit: cover;
+  width: 413px;
   display: block;
-  overflow: hidden;
   border-radius: 8px;
 }
 
-.card__content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 12px;
-  color: #212121;
-}
-
-.card__title {
-  font-size: 20px;
-  line-height: 1.2;
-  width: 100%;
-  font-weight: 500;
-  color: #212121;
-  margin: 0;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  max-width: 390px;
-}
-
 .card__like-btn {
-  background-image: url(../images/like_icon_dark.svg);
+  background-image: url(../images/Heart.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   width: 23px;
   height: 20px;
   border: none;
   background-color: transparent;
-  opacity: 0.4;
-  cursor: pointer;
-  background-size: contain;
-  background-position: center;
+  opacity: 40%;
+  transition: all 0.3s ease;
+}
+
+.card__content {
+  margin-top: -18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card__title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 350px;
+}
+
+.card__delete {
+  background-image: url(../images/State=Default.svg);
   background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  top: -405px;
+  left: 373px;
+  transition: all 0.3sease;
 }
 
-.card__like-btn:hover {
-  opacity: 1;
+.card__delete:hover {
+  background-image: url(../images/State=Hover.svg);
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
-@media screen and (max-width: 627px) {
+.card {
+  max-width: 413px;
+}
+
+@media screen and (max-width: 630px) {
   .card__image {
     height: 288px;
+    width: 288px;
   }
 
   .card__title {
-    max-width: 250px;
     font-size: 16px;
+    line-height: 16px;
+    max-width: 250px;
   }
 
   .card__like-btn {
     width: 20px;
     height: 18px;
+  }
+
+  .card {
+    gap: 20px;
+    width: 288px;
+    height: 318px;
+  }
+
+  .card__delete {
+    left: 251px;
+    top: -282px;
+  }
+
+  .card__content {
+    top: 20px;
+    top: -12px;
+    position: relative;
   }
 }

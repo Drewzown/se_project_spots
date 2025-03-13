@@ -4,16 +4,24 @@
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgb(0, 0, 0, 0.5);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 20px;
   visibility: hidden;
+  padding: 0 20px;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  transition: visibility 0.3s, opacity 0.3s ease-in;
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(0.7);
 }
 
-.modal_opened {
+.modal--opened {
   visibility: visible;
+  opacity: 1;
+  transform: scale(1);
 }
 
 .modal__container {
@@ -30,23 +38,38 @@
   position: absolute;
   top: 32px;
   right: 50px;
-  width: 40px;
   height: 40px;
-  border-radius: 8px;
+  width: 40px;
   border: none;
-  background-color: transparent;
-  opacity: 0.4;
+  background-color: #fff;
+  background-image: url("../images/Closebutton.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 40%;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-image: url(../images/Closebutton.svg);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modal__close-btn_type_preview {
+  background-image: url("../images/Close.svg");
+  top: 0;
+  right: -52.5px;
+  height: 40px;
+  width: 40px;
+  background-color: unset;
+}
+
+.modal__close-btn:hover {
+  opacity: 100%;
+  transform: rotate(90deg);
 }
 
 .modal__title {
   margin: 0 0 32px;
-  font-size: 32px;
   font-weight: 500;
+  font-size: 32px;
+  line-height: 1;
 }
 
 .modal__label {
@@ -54,70 +77,130 @@
   flex-direction: column;
   gap: 8px;
   margin-bottom: 32px;
-  font-size: 16px;
-  font-weight: 500;
-  color: rgba(33, 33, 33, 0.7);
-}
-
-.modal__input {
-  padding: 16px 12px;
-  border-radius: 8px;
-  border: 1px solid rgba(33, 33, 33, 0.4);
-  font-size: 20px;
-  font-weight: 500px;
-  color: rgba(33, 33, 33, 1);
-  cursor: pointer;
-}
-
-.modal__input:hover {
-  border: 1px solid rgba(33, 33, 33, 1);
+  opacity: 0.7;
 }
 
 .modal__submit-btn {
   width: 156px;
   padding: 18px 0;
-  border-radius: 8px;
   background-color: #212121;
   color: #fcf5e5;
+  font-size: 16px;
+  border: none;
+  font-weight: 500;
+  line-height: 16px;
+  border-radius: 8px;
 }
 
-@media screen and (max-width: 627px) {
-  .profile {
-    flex-direction: column;
-    max-width: 288px;
-    align-items: center;
-    text-align: center;
-    padding-top: 20px;
+.modal__submit-btn:hover {
+  cursor: pointer;
+  opacity: 80%;
+}
+
+.modal__input {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 500;
+  padding: 16px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(33, 33, 33, 0.4);
+  color: rgba(33, 33, 33, 0.3);
+}
+
+.modal__input:focus,
+.modal__input:not(:placeholder-shown) {
+  color: #212121;
+}
+
+.modal__input:hover {
+  border-color: #212121;
+}
+
+.modal__container_type_preview {
+  padding: 0;
+  background-color: transparent;
+}
+
+.modal__image {
+  object-fit: contain;
+  max-width: 80vw;
+  max-height: 80vh;
+  display: block;  
+  margin: 0 auto;  
+}
+
+.modal__caption {
+  margin-top: 0;
+  width: fit-content;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 630px) {
+  .modal {
+    padding: 0 10px;
   }
 
-  .profile__avatar {
-    margin: 0 0 12px;
-    height: 80px;
-    width: 80px;
+  .modal__container {
+    padding: 12px;
+    position: relative;
   }
 
-  .profile__column {
-    text-align: center;
-    margin: 0 0 20px;
+  .modal__container_type_preview {
+    max-width: 314px;
   }
 
-  .profile__name {
+  .modal__title {
     font-size: 20px;
-    margin: 0 0 6px;
-    max-width: 288px;
+    margin-bottom: 24px;
+    margin: 10px 0 34px;
   }
 
-  .profile__description {
-    margin: 0 0 32px;
-    max-width: 288px;
+  .modal__close-btn {
+    top: 12px;
+    right: 12px;
   }
 
-  .profile__edit-btn {
+  .modal__label {
+    margin-bottom: 24px;
+  }
+
+  .modal__submit-btn {
+    width: 100%;
+  }
+
+  .modal__input {
+    line-height: 16px;
+    font-size: 16px;
+  }
+
+  .modal__image {
+    object-fit: contain;
+    max-width: 80vw;
+    max-height: 80vh;
+    display: block; 
     margin: 0 auto;
   }
 
-  .profile__add-btn {
-    margin: 0;
-    width: 288px;
+  .modal__close-btn_type_preview {
+    background-image: url(../images/Close.svg);
+    position: absolute;
+    top: -34px;
+    right: 81px;
+    height: 40px;
+    width: 40px;
+    background-color: unset;
   }
+
+
+  .modal__caption {
+    background: rgba(33, 33, 33, 1);
+    margin-left: 28px;
+    display: inline-block;
+  }
+
 }
