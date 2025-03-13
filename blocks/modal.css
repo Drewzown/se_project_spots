@@ -107,20 +107,6 @@
   color: rgba(33, 33, 33, 0.3);
 }
 
-.modal__input:focus,
-.modal__input:not(:placeholder-shown) {
-  color: #212121;
-}
-
-.modal__input:hover {
-  border-color: #212121;
-}
-
-.modal__container_type_preview {
-  padding: 0;
-  background-color: transparent;
-}
-
 .modal__image {
   object-fit: contain;
   max-width: 80vw;
