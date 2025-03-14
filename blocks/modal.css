@@ -107,6 +107,17 @@
   color: #212121
 }
 
+.modal__input:hover {
+  border-color: #212121;
+}
+
+.modal__container_type_preview {
+  padding: 0;
+  background-color: transparent;
+  max-height: 80vh;
+  object-fit: contain;
+}
+
 .modal__image {
   object-fit: contain;
   max-width: 80vw;
