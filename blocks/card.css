@@ -66,7 +66,7 @@
   max-width: 350px;
 }
 
-.card__delete {
+.card__delete-btn {
   background-image: url(../images/trash.svg);
   background-repeat: no-repeat;
   width: 32px;
@@ -79,7 +79,7 @@
   transition: all 0.3sease;
 }
 
-.card__delete:hover {
+.card__delete-btn:hover {
   background-image: url(../images/trash_click.svg);
   transform: scale(1.05);
   cursor: pointer;
@@ -108,7 +108,7 @@
     height: 318px;
   }
 
-  .card__delete {
+  .card__delete-btn {
     left: 251px;
     top: -282px;
   }
