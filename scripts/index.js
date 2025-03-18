@@ -128,12 +128,18 @@ function handleAddCardSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   evt.target.reset();
+  disableButton(cardSubmitBtn, settings);
   closeModal(cardModal);
 }
 
 profileEditButton.addEventListener("click", () => {
   editModalNameInput.value = profileName.textContent;
   editModalDescriptionInput.value = profileDescription.textContent;
+  resetValidation(
+    editFormElement,
+    [editModalNameInput, editModalDescriptionInput],
+    settings
+  );
   openModal(editProfileModal);
 });
 editModalClosebtn.addEventListener("click", () => {
@@ -141,6 +147,7 @@ editModalClosebtn.addEventListener("click", () => {
 });
 
 cardModalbtn.addEventListener("click", () => {
+  resetValidation(cardForm, [cardLinkInput, cardNameInput], settings);
   openModal(cardModal);
 });
 cardModalClosebtn.addEventListener("click", () => {
